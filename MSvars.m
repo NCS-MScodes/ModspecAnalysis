@@ -17,8 +17,8 @@ for i=1:length(fnd)
 input=x;
   
   % Set the parameters
-%subplot(1,2,2);
-fwidthHz=45; % in Hz (ask this parameter)
+
+fwidthHz=300; % in Hz (ask this parameter)
 fstep=fwidthHz;
 fwidthms=1000/(2*pi*fwidthHz);
 ampsamprate=1000;  % or commonly used value 10*fwidthms
@@ -166,10 +166,10 @@ for ib=1:2*nb-1
     whtf(ib,:) = whtf(ib,:).*wht';
 end
 
-% Inserted on Nov 11, 2005
+
 dt=0:nt-1; % timescale in msec
 df=0:2*nb-2; % frequency bands
-% Nov 11 insertion over
+
 
 % Subtract DC value and window
 stim_modspec0 = stim_modspec-mean(mean(stim_modspec));
